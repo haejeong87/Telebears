@@ -1,16 +1,17 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="rgbSong">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>RGB Songs</title>
   <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css">
   <link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 
-<body>
+<body ng-controller="AppController">
   <div class="row-fluid">
     <div id="searchBox" class="cBox1 -r span4">
       This box will contain search tools for songs
+      {{GS.apiKey}}
     </div>
     <div id="queueBox" class="cBox1 -g span4">
       This box will contain song queue
