@@ -1,10 +1,18 @@
 'use strict';
 
+var app = angular.module('beta', [], function($routeProvider, $locationProvider) {
+  $routeProvider.when('/home', {
+    templateUrl: '/partials/home',
+    controller: HomeController
+  });
+  // When you put /home, it also automatically handles /home/ as well
+  $routeProvider.when('/login', {
+    templateUrl: '/partials/login',
+    controller: LoginController
+  });
+  $routeProvider.otherwise( { redirectTo: '/login'} );
 
-// Declare app level module which depends on filters, and services
-angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'myApp.controllers']).
-  config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-    $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-    $routeProvider.otherwise({redirectTo: '/view1'});
-  }]);
+  // configure html5 to get links working
+  // If you don't do this, you URLs will be base.com/#/home rather than base.com/home
+  $locationProvider.html5Mode(true);
+});
