@@ -11,14 +11,14 @@ body {
   border: 1px solid #ccc;
 }
 
-.cBox1.-r {
+.cBox1.cBox1-r {
   background-color: #fee;
 }
 
-.cBox1.-g {
+.cBox1.cBox1-g {
   background-color: #efe;
 }
 
-.cBox1.-b {
+.cBox1.cBox1-b {
   background-color: #eef;
 }

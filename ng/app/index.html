@@ -9,7 +9,7 @@
 
 <body ng-controller="AppController">
   <div class="row-fluid">
-    <div id="searchBox" class="cBox1 -r span4" ng-init='url = "http://tinysong.com/s/" + query + "?format=json&limit=3&key=" + apiKey'>
+    <div id="searchBox" class="cBox1 cBox1-r span4" ng-init='url = "http://tinysong.com/s/" + query + "?format=json&limit=3&key=" + apiKey'>
       <div>
         <input type="text" ng-model="query" placeholder="Search for songs..."></input>
       </div>
@@ -19,11 +19,11 @@
       </div>
     </div>
 
-    <div id="queueBox" class="cBox1 -g span4">
+    <div id="queueBox" class="cBox1 cBox1-g span4">
       This box will contain song queue
     </div>
 
-    <div id="chatBox" class="cBox1 -b span4">
+    <div id="chatBox" class="cBox1 cBox1-b span4">
       This box will contain chat box
     </div>
   </div>
